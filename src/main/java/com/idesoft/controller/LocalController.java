@@ -23,8 +23,8 @@ public class LocalController {
 
 	@GetMapping("/search/{comuna}")
 	public ResponseEntity<?> search(@PathVariable String comuna) {
-		logger.info("Llamando servicio busqueda de locales por comuna");
 		
+		logger.info("Llamando servicio busqueda de locales por comuna");		
 		return new ResponseEntity<List<Response>>(localService.searchLocal(comuna), HttpStatus.OK);
 
 	}
